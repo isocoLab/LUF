@@ -1,0 +1,22 @@
+<rdf:RDF
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about="http://soa4all.isoco.net/luf/tools/luf">
+	<rdf:Type rdf:resource="http://purl.org/net/provenance/ns#NonHumanActor"/>
+	<rdfs:label>LUF: Linked User Feedback</rdfs:label>
+	<rdfs:seeAlso rdf:resource="http://soa4all.isoco.net/luf/about/"/>
+	<operatedBy xmlns="http://purl.org/net/provenance/ns#" rdf:resource="http://lab.isoco.net/resource/galvaro"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://soa4all.isoco.net/luf/tools/spices">
+	<rdf:Type rdf:resource="http://purl.org/net/provenance/ns#NonHumanActor"/>
+	<rdfs:label>SPICES: Semantic Platform for the Interaction and Consumption of Enriched Services</rdfs:label>
+	<rdfs:seeAlso rdf:resource="http://soa4all.isoco.net/spices/about/"/>
+	<operatedBy xmlns="http://purl.org/net/provenance/ns#" rdf:resource="http://lab.isoco.net/resource/galvaro"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://soa4all.isoco.net/luf/tools/iserve">
+	<rdf:Type rdf:resource="http://purl.org/net/provenance/ns#NonHumanActor"/>
+	<rdfs:label>iServe: Where Linked Data Meets Services</rdfs:label>
+	<rdfs:seeAlso rdf:resource="http://iserve.kmi.open.ac.uk/"/>
+	<operatedBy xmlns="http://purl.org/net/provenance/ns#" rdf:resource="http://people.kmi.open.ac.uk/rdf.php?idstring=dong-liu"/>
+</rdf:Description>
+</rdf:RDF>
