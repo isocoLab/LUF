@@ -1,9 +1,53 @@
 Linked User Feedback service documentation
-http://soa4all.isoco.net/luf/about
+More info: http://soa4all.isoco.net/luf/about
 
-ToDo: Write installation instructions, etc.
+Installation Instructions
+=========================
 
-download code
-modify default_config.properties to config.properties
-build etc.
-write about sesame, pubby, snorql
+Note: In order to run the LUF service, a triple store (e.g., Sesame) is needed. Also, for exposing the feedback information as Linked Data, a Linked Data frontend (e.g., Pubby) is needed.
+
+Sesame, LUF and Pubby can be deploed in a servlet container such as Tomcat. So, the steps would be:
+
+ (0: Tomcat)
+  1: Sesame
+  2: LUF
+  3: Pubby
+
+
+1: Installing Sesame
+--------------------
+
+Plenty of info at http://www.openrdf.org/
+
+
+2: Installing LUF
+-----------------
+
+ - Get the code from GitHub
+ - (If using Eclipse, import project as Maven project)
+   - use JDK >= 1.6.0_12
+ - Move default_config.properties to config.properties
+   - Modify the default data and set the urls right
+   - Include your sparql endpoint
+ - "mvn package" to generate the .war
+ - Deploy the .war in tomcat
+
+3: Installing Pubby
+-------------------
+
+ - Download from https://github.com/cygri/pubby
+ - Deploy the webapp in a tomcat, and rename (for example to "luf")
+ - config.ttl needs to be modified:
+   - Include:
+      @prefix rev: <http://purl.org/stuff/rev#> .
+      @prefix tags: <http://www.holygoat.co.uk/owl/redwood/0.1/tags/> .
+   - Modify (examples given):
+      conf:projectName "Linked User Feedback";
+      conf:projectHomepage <http://soa4all.isoco.net/luf/about>;
+      conf:webBase <http://localhost:8080/luf/>;
+      conf:indexResource <http://localhost:8080/luf/comments/1234>;
+      conf:sparqlEndpoint <http://localhost:8080/openrdf-sesame/repositories/LUF>;
+      # conf:sparqlDefaultGraph <http://dbpedia.org>;
+      conf:datasetBase <http://soa4all.isoco.net/luf/>;
+      # conf:metadataTemplate "metadata.ttl";
+
