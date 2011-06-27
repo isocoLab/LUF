@@ -144,7 +144,7 @@ public class Comments {
 
     	        CommonLinkedUserFeedbackService.addCommentTriples(itemId, userId, comment, dateTime, commentURI);
     	        CommonLinkedUserFeedbackService.addProvenanceTriples(commentURI, verification, dateTime); 
-    	        response = "<status>ok</status><commentId>"+commentURI+"</commentId>";
+    	        response += "<status>ok</status><commentId>"+commentURI+"</commentId>";
     		}
     	}
 		

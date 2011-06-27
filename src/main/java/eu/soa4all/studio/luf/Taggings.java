@@ -148,7 +148,7 @@ public class Taggings {
 
     	        CommonLinkedUserFeedbackService.addTaggingTriples(itemId, userId, tagList, dateTime, taggingURI);
     	        CommonLinkedUserFeedbackService.addProvenanceTriples(taggingURI, verification, dateTime); 
-    	        response = "<status>ok</status><taggingId>"+taggingURI+"</taggingId>";
+    	        response += "<status>ok</status><taggingId>"+taggingURI+"</taggingId>";
     		}
     	}
 		

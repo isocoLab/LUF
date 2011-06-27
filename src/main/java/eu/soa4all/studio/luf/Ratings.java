@@ -155,7 +155,7 @@ public class Ratings {
     			try {
     				if((Double.parseDouble(minValue)>Double.parseDouble(rating))
     						||(Double.parseDouble(maxValue)<Double.parseDouble(rating))){
-    					response = "<error>Wrong rating value outside min and max</error>";
+    					response += "<error>Wrong rating value outside min and max</error>";
     					error = true;
     				}
     			} catch (NumberFormatException e) {
@@ -176,7 +176,7 @@ public class Ratings {
 
     	        CommonLinkedUserFeedbackService.addRatingTriples(itemId, userId, rating, minValue, maxValue, dateTime, ratingURI); 
     	        CommonLinkedUserFeedbackService.addProvenanceTriples(ratingURI, verification, dateTime); 
-    	        response = "<status>ok</status><ratingId>"+ratingURI+"</ratingId>";
+    	        response += "<status>ok</status><ratingId>"+ratingURI+"</ratingId>";
     		}
     	}
 
