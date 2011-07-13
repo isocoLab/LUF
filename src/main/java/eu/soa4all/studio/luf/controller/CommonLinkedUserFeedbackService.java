@@ -41,7 +41,7 @@ public class CommonLinkedUserFeedbackService
 			URI userURI = repoModel.createURI(userId);
 			URI reviewType = repoModel.createURI("http://purl.org/stuff/rev#Review");
 			URI hasReview = repoModel.createURI("http://purl.org/stuff/rev#hasReview");
-			URI hasType = repoModel.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#Type");
+			URI hasType = repoModel.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
 			URI hasReviewer = repoModel.createURI("http://purl.org/stuff/rev#reviewer");
 			URI hasRating = repoModel.createURI("http://purl.org/stuff/rev#rating");
 			URI createdOn = repoModel.createURI("http://purl.org/stuff/rev#createdOn");
@@ -73,7 +73,7 @@ public class CommonLinkedUserFeedbackService
 	    	URI userURI = repoModel.createURI(userId);
 	    	URI reviewType = repoModel.createURI("http://purl.org/stuff/rev#Review");
 	    	URI hasReview = repoModel.createURI("http://purl.org/stuff/rev#hasReview");
-	    	URI hasType = repoModel.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#Type");
+	    	URI hasType = repoModel.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
 	    	URI hasReviewer = repoModel.createURI("http://purl.org/stuff/rev#reviewer");
 	    	URI hasText = repoModel.createURI("http://purl.org/stuff/rev#text");
 	    	URI createdOn = repoModel.createURI("http://purl.org/stuff/rev#createdOn");
@@ -102,7 +102,7 @@ public class CommonLinkedUserFeedbackService
         	URI userURI = repoModel.createURI(userId);
         	URI tagType = repoModel.createURI("http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tagging");
         	URI hasTagging = repoModel.createURI("http://www.holygoat.co.uk/owl/redwood/0.1/tags/tag");
-        	URI hasType = repoModel.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#Type");
+        	URI hasType = repoModel.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
         	URI taggedBy = repoModel.createURI("http://www.holygoat.co.uk/owl/redwood/0.1/tags/taggedBy");
         	URI associatedTag = repoModel.createURI("http://www.holygoat.co.uk/owl/redwood/0.1/tags/associatedTag");
         	URI taggedOn = repoModel.createURI("http://www.holygoat.co.uk/owl/redwood/0.1/tags/taggedOn");
@@ -139,7 +139,7 @@ public class CommonLinkedUserFeedbackService
 			// Tests to store provenance information
 			// TODO: Finish properly
 			URI dataCreationType = repoModel.createURI("http://purl.org/net/provenance/ns#DataCreation");
-        	URI hasType = repoModel.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#Type");
+        	URI hasType = repoModel.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
 			URI dataItemType = repoModel.createURI("http://purl.org/net/provenance/ns#DataItem");
 			URI prvPerformedAt = repoModel.createURI("http://purl.org/net/provenance/ns#performedAt");
 			URI prvPerformedBy = repoModel.createURI("http://purl.org/net/provenance/ns#performedBy");
